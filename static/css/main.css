@@ -1,0 +1,33 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #444;
+    font-size: 70pt;
+    padding: 70px 0;
+    text-align: center;
+
+
+  /* Center vertically and horizontally */
+  display: flex;
+  justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20%
+}
+
+
+div {
+    font-size: 50pt;
+    padding: 70px 0;
+    text-align: center;
+
+  background-color: red;
+  /* Center vertically and horizontally */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px; /* Apply negative top and left margins to truly center the element */
+
+}

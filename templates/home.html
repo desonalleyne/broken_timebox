@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flask app</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  </head>
+  <body>
+    <header>
+    </header>
+      {% if broken_time %}
+      {{ broken_time }}
+      {% endif %}
+    <div class="container">
+    </div>
+  </body>
+</html>

@@ -1,12 +1,13 @@
 from datetime import datetime
 from random import randint
-from flask import Flask
+from flask import Flask, render_template
 from ConfigParser import ConfigParser 
 
 cp = ConfigParser()
 cp.read('config.cfg')
 lower_m_delta = cp.getint('general','lower_m_delta')
 upper_m_delta = cp.getint('general','upper_m_delta')
+port = cp.getint('general','port')
 
 app = Flask(__name__)
 
@@ -34,6 +35,7 @@ def root():
             hour = (hour + (minute / 60)) % 24
             minute = minute % 60
 
-    return "The time is {} minute{} {} {:02d}:{:02d}".format(min_delta, 's' if min_delta > 1 else '', side,hour,minute)
+    broken_time = "The time is {} minute{} {} {:02d}:{:02d} hrs".format(min_delta, 's' if min_delta > 1 else '', side,hour,minute)
+    return render_template('home.html', broken_time=broken_time)
 
-app.run('0.0.0.0', 8000)
+app.run('0.0.0.0', port)
