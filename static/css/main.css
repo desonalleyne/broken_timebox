@@ -23,11 +23,17 @@ div {
     padding: 70px 0;
     text-align: center;
 
-  background-color: red;
-  /* Center vertically and horizontally */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -25px 0 0 -25px; /* Apply negative top and left margins to truly center the element */
+    background-color: red;
+    /* Center vertically and horizontally */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px; /* Apply negative top and left margins to truly center the element */
+}
 
+p {
+    font-size:15pt;
+    margin-left: 83%;
+    margin-top: 44%;
+    position: fixed;
 }

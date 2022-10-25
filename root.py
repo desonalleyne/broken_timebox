@@ -1,7 +1,7 @@
 from datetime import datetime
 from random import randint
 from flask import Flask, render_template
-from ConfigParser import ConfigParser 
+from configparser import ConfigParser 
 
 cp = ConfigParser()
 cp.read('config.cfg')
@@ -34,8 +34,7 @@ def root():
         if minute < 0:
             hour = (hour + (minute / 60)) % 24
             minute = minute % 60
-
-    broken_time = "The time is {} minute{} {} {:02d}:{:02d} hrs".format(min_delta, 's' if min_delta > 1 else '', side,hour,minute)
+    broken_time = "The time is {} minute{} {} {:02d}:{:02d} hrs".format(min_delta, 's' if min_delta > 1 else '', side, int(hour), int(minute))
     return render_template('home.html', broken_time=broken_time)
 
-app.run('0.0.0.0', port)
+app.run('0.0.0.0', port, debug=True)
