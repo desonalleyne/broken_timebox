@@ -5,13 +5,15 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
   </head>
   <body>
-    <header>
-    </header>
       {% if broken_time %}
       {{ broken_time }}
       {% endif %}
-    <div class="container">
-    </div>
-    <p>Made with &#128153 and Python</p>
+
+      <p class='actual'>
+      {% if actual_time %}
+      {{ actual_time }}
+      {% endif %}
+      </p>
+    <p class='footer'>Made with &#128153 and Python</p>
   </body>
 </html>

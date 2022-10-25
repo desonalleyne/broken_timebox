@@ -4,7 +4,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #444;
     font-size: 70pt;
-    padding: 70px 0;
+    padding: 50px;
     text-align: center;
 
 
@@ -14,26 +14,26 @@ body {
     align-items: center;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 20%
+    margin-top: 10%;
 }
 
 
-div {
-    font-size: 50pt;
-    padding: 70px 0;
+.actual {
+    font-size: 15pt;
     text-align: center;
 
-    background-color: red;
     /* Center vertically and horizontally */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -25px 0 0 -25px; /* Apply negative top and left margins to truly center the element */
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 500px;
+    position: fixed;
 }
 
-p {
-    font-size:15pt;
-    margin-left: 83%;
-    margin-top: 44%;
+.footer{
+    font-size:12pt;
+    padding: 60%;
+    padding: 10%;
+    margin-top: 700px;
     position: fixed;
 }

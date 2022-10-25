@@ -35,6 +35,7 @@ def root():
             hour = (hour + (minute / 60)) % 24
             minute = minute % 60
     broken_time = "The time is {} minute{} {} {:02d}:{:02d} hrs".format(min_delta, 's' if min_delta > 1 else '', side, int(hour), int(minute))
-    return render_template('home.html', broken_time=broken_time)
+    actual_time = "The actual time is {} hrs".format(d.strftime('%H:%m:%S'))
+    return render_template('home.html', broken_time=broken_time,actual_time=actual_time)
 
-app.run('0.0.0.0', port, debug=True)
+app.run('0.0.0.0', port)
